@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food-Habits</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="AdobeStock_135759645-846x564.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="back-img">
+            <nav>
+                <div class="nav-bar">
+                    <div class="logo">
+                        <img src="Screenshot__130_-removebg-preview.png">
+                    </div>
+                    <div class="nav-links "id="nav-links">
+                        <i class="fa-solid fa-xmark" style="color: #050505;" onclick="closeMenu()"></i>
+                        
+                        <ul>
+                            <li><a href="#Home">Home</a></li>
+                            <li><a href="#Search">Search</a></li>
+                            <li><a href="#About">About</a></li>
+                            <li><a href="#Survey">Survey</a></li></li>
+                        
+                            <li><a href="#Contact">Contact</a></li>
+                            <li><a href="InitilalDoc (1) (1).pdf" download="InitilalDoc">Download</a></li>
+                        </ul>
+                    </div>
+                    <i class="fa-solid fa-bars" style="color: #ffffff;" onclick="showMenu()"></i>
+                            
+                    
+                </div>
+                
+            </nav>
+            <!------Msg------>
+            <div class="msg">
+                <h1><span>Healthy</span> Food For a Better Life</h1>
+                <p><span>"Healthy eating is a way of life,</span> so it's important to establish routines that are simple, realistically, and ultimately livable."</p>
+            </div>
+        </div>
+
+        <div class="search-nutritions" >
+            <div class="food-table">
+                <div class="items-food">
+                    <h1>Healthy Food Items</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Healthy Foods</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1. Fruits (e.g., apples, bananas, berries)</td></tr>
+                            <tr><td>2. Vegetables (e.g., spinach, broccoli, carrots)</td></tr>
+                            <tr><td>3. Whole grains (e.g., oats, quinoa, brown rice)</td></tr>
+                            <tr><td>4. Lean proteins (e.g., chicken breast, fish, tofu)</td></tr>
+                            <tr><td>5. Nuts and seeds (e.g., almonds, chia seeds, walnuts)</td></tr>
+                            <tr><td>6. Legumes (e.g., lentils, chickpeas, black beans)</td></tr>
+                            <tr><td>7. Greek yogurt</td></tr>
+                            <tr><td>8. Olive oil</td></tr>
+                            <tr><td>9. Avocado</td></tr>
+                            <tr><td>10. Salmon</td></tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div class="items-food">
+                    <h1>Non-Healthy Food Items</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Non-Healthy Foods</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1. Fast food (e.g., burgers, fries)</td></tr>
+                            <tr><td>2. Sugary drinks (e.g., soda, energy drinks)</td></tr>
+                            <tr><td>3. Processed snacks (e.g., chips, cookies)</td></tr>
+                            <tr><td>4. Candy and sweets</td></tr>
+                            <tr><td>5. Deep-fried foods (e.g., fried chicken, onion rings)</td></tr>
+                            <tr><td>6. White bread and pastries</td></tr>
+                            <tr><td>7. Ice cream</td></tr>
+                            <tr><td>8. Pizza</td></tr>
+                            <tr><td>9. Alcohol (in excess)</td></tr>
+                            <tr><td>10. Sugary cereals</td></tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+        <!-------calories----->
+        <div class="search-food" id="Search">
+            
+            <div class="calories-search">
+                <input type="search" id="search" placeholder="Search here for calories">
+                <button type="submit" onclick="nutrition()">Find Calories</button>
+            </div>
+            <div class="search-items">
+                <p id="know">Search Here To know the Calories of the Particular food Item </p>
+                <div class="class-table info">
+                    <h2 id="please"></h2>
+                    <h2 id="name"></h2>
+                    <br>
+                    <h2 id="total"></h2>
+                    <br>
+                    <table id="nutritionTable" class="items-food">
+                        
+                    </table>
+                </div>
+                <div class="search-pic">
+
+                </div>
+            </div>
+            
+        </div>
+
+        <!--------------------About Section------------------>
+        <div class="About " id="About">
+            <div class="about-heading">
+                <h1>About CSP</h1>
+                <p>Community Service Project</p>
+            </div>
+            <div class="information">
+                <div class="info">
+                    <p>Bethamcherla is a gram panchayat located in Bethamcherla Mandal of Nandyal District in Andhra
+                        Pradesh. The total population of this village is 2900 and a Government Primary and Secondary
+                        School is located. Bethamcherla is a town with Nagar panchayat civic status and mandal headquarters located in Nandyal
+                        district of the Indian state of Andhra Pradesh. It comes under Dhone assembly constituency and Nandyal
+                        Parliament Constituency.Bethamcherla is a Census Town city in district of Kurnool, Andhra Pradesh. The
+                        Bethamcherla Census Town has population of 38,994 of which 19,424 are males while 19,570 are females
+                        as per report released by Census India 2011.Population of Children with age of 0-6 is 4882 which is 12.52 % of total population of Bethamcherla (CT).
+                        In Bethamcherla Census Town, Female Sex Ratio is of 1008 against state average of 993. Moreover Child
+                        Sex Ratio in Bethamcherla is around 940 compared to Andhra Pradesh state average of 939. Literacy rate
+                        of Bethamcherla city is 65.60 % lower than state average of 67.02 %. In Bethamcherla, Male literacy is
+                        around 75.03 % while female literacy rate is 56.34%. </p>
+                    <br>
+                    
+                </div>
+                <div class="info">
+                    <img src="Bethamcherla_Railway_Station_edited.jpg">
+                </div>
+            </div>
+            <div class="populationChart">
+                <div id="chart_div"></div>
+                <div id="population-gender">
+                <canvas id="populationChart"></canvas>
+                
+                </div>
+                
+            </div>
+            <!-----Map Location-->
+            <div class="map">
+                <h2>Location</h2>
+                <div class="map-loc">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61525.58363240466!2d78.11256845653169!3d15.465649818711798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb432d116f1f50b%3A0x3570497c783fe2fd!2sBetamcherla%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1720003521334!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <!---guide Members-->
+        
+
+
+    </div>
+    <div class="guides">
+        <div class="guide-heading">
+            <h1>Information About CSP</h1>
+            <p>Community Service Project</p>
+            <h4>Guide & Co-ordinator</h4>
+        </div>
+        <div class="guides-info">
+            <div class="guide-img">
+                <img src="32229430-2987-43d0-8505-0e452c317adb.jpg">
+                <div class="guide-he">
+                    <h4>Dr.S.Md. Farooq, M.Tech.,(Ph.D)
+                        Professor and HOD
+                    Department ofCSE.
+                    PROJECT GUIDE
+                    </h4>
+                </div>
+                    
+            </div>
+            <div class="guide-img">
+                <img src="WhatsApp Image 2024-07-08 at 11.22.01 AM.jpeg">
+                <div class="guide-he">
+                    <h4>Mr.P. Bhasar,M.Tech.,(Ph.D)
+
+                        Assistant Professor
+                    Department ofCSE.
+                    PROJECT COORDINATOR
+                    </h4>
+                </div>
+                
+            </div>
+        </div>
+        <!---------Team members--------->
+        <div class="team">
+            <div class="team-heading">
+                <h1>Team Members</h1>
+            </div>
+            <div class="team-information">
+                <div class="team-img">
+                    <img src="IMG_20240528_054537_120.jpg">
+                    <div class="team-info">
+                        <h4>J.Venkat Reddy
+                            <p>22A51A0548</p>
+                        <P>Computer Science & Engineering</P>
+                        </h4>
+                        
+                    </div>
+                </div>
+                <div class="team-img">
+                    <img src="1711104108631.jpg">
+                    <div class="team-info">
+                        <h4>A.Praveen Kumar
+                            <p>22A51A0505</p>
+                        <P>Computer Science & Engineering</P>
+                        </h4>
+                        
+                    </div>
+                </div>
+                <div class="team-img">
+                    <img src="IMG_20230816_122938.jpg">
+                    <div class="team-info">
+                        <h4>G. Md.Elaheed
+                            <p>22A51A0541</p>
+                        <P>Computer Science & Engineering</P>
+                        </h4>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="team-2">
+                <div class="team-information">
+                    <div class="team-img">
+                        <img src="WhatsApp Image 2024-07-04 at 7.51.07 AM.jpeg">
+                        <div class="team-info">
+                            <h4>K.Sai Prasad Reddy
+                                <p>22A51A0550</p>
+                            <P>Computer Science & Engineering</P>
+                            </h4>
+                            
+                        </div>
+                    </div>
+                    <div class="team-img">
+                        <img src="Screenshot (135).png">
+                        <div class="team-info">
+                            <h4>G.Siva Shankar
+                                <p>22A51A0539</p>
+                            <P>Computer Science & Engineering</P>
+                            </h4>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+        
+    </div>
+    <!-------------Survey----------->
+    <div class="Survey" id="Survey">
+        <div class="survey-inf">
+            <div class="survey-heading">
+                <h1>Survey Details</h1>
+            </div>
+            <div class="information">
+                <div class="info">
+                    <p>Healthy eating contributes to an overall sense of well-being, and is a cornerstone in the 
+                        prevention of a number of conditions, including heart diseases, high blood pressure etc. We 
+                        conducted the survey in Bethamcherla village, Bethamcherla Mandal, Nandyal District. The main purpose of 
+                        this study is to determine how the people eating their food, whether they take healthy food or not, in 
+                        a proper way and to investigate the food choices of different people and the determinates of their 
+                        food choices in the village of Bethamcherla which is located in Nandyal District. We also determine the 
+                        food habits of different age groups. The study found that youngsters are mostly like to eat modern 
+                        food, spicy food and non-vegetarian food. The determinates of food choices such as good taste, 
+                        healthy food ,low cost, good quality, and convenience food found very important for choose or like 
+                        a food. This study also includes the food customs that must be followed while eating. Today the 
+                        youngsters feels eating modern food such as pizza, burger prestige issue than buying the traditional 
+                        food is oldest habit it also spoil food habits among youngster. This study is helpful for maintaining 
+                        healthy diet and for building healthy food habits to keep our body healthy</p>
+                        <br>
+                        <p>Our survey revealed diverse food habits across age groups in Bethamcherla Mandal. Children and adolescents prefer fast foods like burgers and noodles, with a penchant for sweets. Young adults in their 20s and 30s explore both local and international cuisines, often opting for quick meals due to busy schedules, while increasingly prioritizing health with salads and lean proteins. Middle-aged adults focus on balanced, home-cooked meals, considering health factors and maintaining cultural food practices. Elderly individuals prefer lighter, traditional meals, emphasizing comfort and cultural culinary traditions. Overall, there's a growing interest in health and organic foods across all ages, influencing meal choices and eating patterns in the region.</p>
+                    
+                </div>
+                <div class="info">
+                    <img src="Good-eating-habits-for-students.jpg">
+                </div>
+                
+                
+            </div>
+            
+            <div class="graphs">
+                <div id="survey-graphs"></div>
+            </div>
+            <div class="graphs-two">
+                <div class="survey-graph" id="graph_two">
+
+                </div>
+            </div>
+            <div class="survey-pics information">
+                <div class="survey--pics info">
+                    <p>we completed our Community Service Project (CSP) with immense joy and valuable learning experiences. Our project took us to several villages where we interacted closely with the local communities. The experience was both enlightening and enjoyable, filled with fun activities and meaningful engagements. During our visits, we focused on understanding and documenting the food habits of the villagers. We observed their daily routines, participated in meal preparations, and discussed their dietary practices. This provided us with deep insights into their nutritional choices, traditional recipes, and the cultural significance of their meals. The project not only allowed us to contribute positively to the communities but also enriched our own knowledge about rural life and sustainable living practices. It was a rewarding experience that combined education, service, and enjoyment, leaving us with cherished memories and a deeper appreciation for diverse lifestyles.</p>
+                </div>
+            </div>
+            
+        </div>
+        <!----Survey Pics------>
+        <div class="survev">
+            <div class="team-img-survey">
+                <img src="Screenshot_4-7-2024_161835_.jpeg">
+                <img src="Screenshot_4-7-2024_161856_.jpeg">
+                <img src="Screenshot_4-7-2024_161914_.jpeg">
+                <img src="Screenshot_4-7-2024_161937_.jpeg">
+            </div>
+        </div>
+        <div class="information">
+            <div class="info">
+                <p>We conducted an awareness camp on food habits at schools, aiming to educate students about healthy eating practices. The camp included sessions on the importance of balanced nutrition, focusing on diverse food sources rich in essential nutrients like proteins, vitamins, and minerals. Through interactive workshops and informative presentations, we encouraged students to make informed choices about their diets, emphasizing the benefits of incorporating fruits, vegetables, lean proteins, and whole grains into their daily meals. Our goal was to promote lifelong habits that support overall health and well-being among students, empowering them with the knowledge to make nutritious food choices both at school and beyond.</p>
+            </div>
+            <div class="info">
+                <img src="Picsart_24-07-04_16-43-41-802.jpg">
+                
+            </div>
+        </div>
+        <div class="survev">
+            <div class="team-img-survey">
+                <img src="Picsart_24-07-04_16-45-27-869.jpg">
+                <img src="IMG-20240705-WA0033.jpg">
+                <img src="IMG-20240705-WA0037.jpg">
+                <img src="IMG-20240705-WA0041.jpg">
+            </div>
+        </div>
+        <div class="information">
+            <div class="info">
+                <h2>The Problem is Most of  children being addicted to fast food</h2>
+        
+            
+                <p>our initiative has focused on raising awareness among students about the benefits of consuming organic foods such as vegetables, green leafy curries, and other nutritious options. Through our awareness program, we emphasize the importance of avoiding fast food and opting for healthier alternatives. By promoting a diet rich in organic foods, we aim to educate students about the positive impact on their health, emphasizing nutrients that support growth and overall well-being. This approach not only encourages healthier eating habits but also instills a long-term understanding of the benefits of making informed food choices.</p>
+            </div>
+        </div>
+    </div>
+    <div class="Contact" id="Contact">
+        <div class="contact-info">
+            <div class="contact-details">
+                <h1>Contact For</h1>
+                <p>Example@gmail.com</p>
+                <p>0123456789</p>
+                <div class="icons">
+                    <p><i class="fa-brands fa-linkedin"></i></p>
+            
+                    <p><i class="fa-brands fa-github"></i></p>
+                </div>
+                
+            </div>
+            <div class="contact-information">
+                <form name="submit-to-google-sheet">
+                    <input type="name"  name="Name"placeholder="Enter Your name">
+                    <input type="email" name="Email" placeholder="Enter your Mail">
+                    <textarea name="Message" placeholder="Your Message"></textarea>
+                </form>
+                <div class="button">
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="footer">
+            <footer>
+                <div class="footer-info">
+                    <h3>©All Rights Reserved 2024</h3>
+                    <br>
+                    <p>   CSE Avengers❣️</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="javas.js"></script>
+    
+</body>
+</html>
+<!--{"image":"https://foodish-api.com/images/biryani/biryani32.jpg"} make it for all names--SE>

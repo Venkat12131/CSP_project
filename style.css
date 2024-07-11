@@ -1,0 +1,649 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    
+}
+body{
+    color:rgb(0, 0, 0);
+}
+.back-img{
+    width: 100%;
+    height:100vh;
+    background: linear-gradient(rgba(21, 26, 21, 0.87),rgba(2,20,0,0.6)),url("pexels-ella-olsson-572949-1640770.jpg");
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav-bar{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img{
+    width:190px;
+    height: 150px;
+}
+.nav-bar ul li{
+    font-size: 23px;
+    
+    list-style: none;
+    display: inline-block;
+    padding:8px 19px;
+    cursor: pointer;
+    color:whitesmoke;
+    position: relative;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+    position: relative;
+}
+.nav-links li::before{
+    content: "";
+    width:0;
+    height:3px;
+    position: absolute;
+    left:20px;
+    bottom: 0;
+    background-color: rgb(120, 234, 156);
+    transition: 0.4s;
+}
+.nav-links li:hover::before{
+    width:50%;
+}
+
+.msg{
+    width: 90%;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.msg h1{
+    font-size: 63px;
+    color:rgb(255, 255, 255);
+}
+.msg p{
+    margin: 10x 0 40px;
+    font-size: 18px;
+    color: whitesmoke;
+}
+a{
+    text-decoration: none;
+    color:whitesmoke;
+}
+p span{
+    color:rgb(255, 255, 255)
+}
+span{
+    color: rgb(104, 226, 104);
+}
+.msg p{
+    font-size: 18px;
+    margin-left: 2%;
+}
+nav .fa-solid{
+    display: none;
+}
+/* media for mobile*/
+@media(max-width:700px)
+{
+    .back-img{
+        width:100%;
+        height:100vh;
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding:1% 2%;
+        
+    }
+    .logo img{
+        width:140px;
+        height:90px;
+        padding:2px 4px;
+    }
+    .nav-bar ul li{
+        display: block;
+        color:black;
+        padding: 2% 6%;
+
+    }
+    .nav-links{
+        position: absolute;
+        width:150px;
+        height:100vh;
+        right:0px;
+        top:0px;
+        z-index: 2;
+        background: rgb(154, 219, 124);
+        text-align: center;
+        font-size: 18px;
+        padding:2px 2%;
+        color:black;
+        font-size:20px ;
+        display: none;
+        transition: 5s;
+    }
+    nav .fa-solid{
+        display:  block;
+        font-size: 28px;
+        cursor: pointer;
+        margin: 12px;
+        
+    }
+    .nav-links ul li{
+        padding: 12px;
+    }
+    .msg{
+        position: absolute;
+        font-size: 25px;
+    }
+    .msg h1{
+        font-size: 45px;
+    }
+    .msg p{
+        font-size: 18px;
+    }
+    .information{
+        width:90%;
+        padding:5px 10px;
+        flex-direction: column;
+    }
+    .info p{
+        width:100%;
+        font-size: 15px;
+
+    }
+    .populationChart{
+        width:80%;
+        flex-direction: column;
+    }
+    #chart_div{
+        width: 250px;
+    }
+    .map-loc{
+        width:80%;
+        height: 250px;;
+        padding:2px 15px;
+    }
+    
+    .guides-info{
+        flex-direction: column;
+        padding:2% 4%;
+    }
+    .guide-img{
+        margin-top:50px ;
+    }
+    .guide-img img{
+        width: 100%;
+        height: 300px;
+        
+    }
+    
+    .team-information{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .survey-heading h1
+    {
+        font-size: 39px;
+    }
+    #survey-graphs{
+        width:300px;
+        height: 250px;
+    }
+    .survev{
+        width:80%;
+        padding:2% 4%;
+    }
+    .contact-info{
+        width:100%;
+        padding: 2%;
+        color:whitesmoke;
+        font-size: 15px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .contact-details h1{
+        width: 25%;
+        font-size: 20px;
+    }
+    .contact-details p{
+        font-size: 18px;
+    }
+    .contact-information{
+        width:100%;
+        padding:2% 4%;
+    
+    }
+    .contact-information input, textarea,button{
+        width:80%;
+        height:55px;
+        padding: 5%;
+        margin-left: 28px;
+        font-size: 10px;
+    }
+    .food-table{
+        flex-direction: column;
+        
+    }
+    .items-food table{
+        width:100%;
+    }
+    .calories-search input{
+        width: 150%;
+        padding: none;
+        
+    }
+    .calories-search :placeholder-shown{
+        font-size: 16px;
+    }
+    .calories-search button{
+        
+        height: 50px;
+        font-size: 15px;
+        border-radius: 5px;
+    }
+    #know{
+        width: 95%;
+        font-size: 18px;
+    }
+
+        
+}
+
+
+/* About Section*/
+.about-heading{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    padding-top: 100px;
+}
+.about-heading h1{
+    font-size: 35px;
+    font-weight: 600;
+}
+.about-heading p{
+    font-size: 14px;
+    
+}
+.information{
+    
+    width:80%;
+    margin: auto;
+    display: flex;
+    padding-top: 80px;
+    background-color: rgb(190, 227, 185);
+    border-radius: 15px;
+    padding: 15px 25px;
+}
+.info p{
+    flex-basis: 45%;
+    padding:30px 5px;
+    font-size: 16px;
+}
+.info img{
+    padding:30px 5px;
+    max-width: 250px;
+    height:250px;
+    border-radius: 20px;
+}
+
+#population-gender{
+    flex-basis: 35%;
+    height: 250px;
+    width:250px;
+    
+}
+.populationChart{
+    
+    width:80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 80px;
+    
+    border-radius: 15px;
+    padding: 15px 25px;
+    cursor: pointer;
+}
+#chart_div{
+    cursor: pointer;
+    max-width:500px;
+    height:250px;
+}
+.map-loc{
+    margin-top: 100px;
+    width:100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    border-radius: 15px;
+    padding:3px 15px;
+}
+.map h2{
+    font-size: 25px;
+    text-align: center;
+}
+/* guide*/
+.guides{
+    width:100%;
+    text-align: center;
+    margin-top: 150px;
+
+}
+.guides-info{
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 16%;
+    
+}
+.guide-img {
+    
+    font-size: 17px;
+    position: relative;
+}
+.guide-img img
+{
+    max-width:250px;
+    height: 250px;
+    box-shadow: 2px 20px 10px rgba(2,20,0,0.6);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.guide-he{
+    position: absolute;
+    width:100%;
+    height: 0px;
+    
+    background: linear-gradient(rgba(27, 29, 27, 0.8),rgba(111, 151, 110, 0.8));
+    bottom:0px;
+    left: 0;
+    color:whitesmoke;
+    overflow: hidden;
+    transition: height 0.4s;
+}
+.guide-img:hover img{
+    transform: translateY(-5px);
+}
+.guide-img:hover .guide-he{
+    height: 265px;
+    width: 100%;
+}
+.guide-he h4{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+}
+.guide-heading{
+    font-size: 25px;
+}
+.guide-he2{
+width: 250px;
+height: 50px;
+font-size: 17px;
+display: none;
+}
+/*Team*/
+.team-heading{
+    font-size: 20px;
+    padding: 3% 6%;
+}
+.team-img{
+    position: relative;
+}
+
+.team-img img{
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+    box-shadow: 2px 20px 10px rgba(2,20,0,0.6);
+}
+.team-information{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5% 15%;
+    
+}
+.team-info{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(27, 29, 27, 0.8),rgba(111, 151, 110, 0.8));
+    position: absolute;
+    bottom: 0px;
+    left:0px;
+    color:whitesmoke;
+    overflow: hidden;
+    transition: height 0.4s;
+}
+
+.team-img:hover .team-info{
+    height: 100%;
+}
+.team-info h4{
+padding-top: 100px;
+}
+
+/* Survey Details*/
+.survey-heading{
+    font-size: 30px;
+    color:black;
+    text-align: center;
+}
+.survey-para{
+    width:90%;
+    padding:4% 8%;
+}
+.survey-info{
+    width:90%;
+    padding: 2% 12%;
+}
+.survey-graphs{
+    width:300px;
+    height:300px;
+}
+#survey-graphs{
+    width:600px;
+    height:500px;
+    
+}
+.graphs{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+}
+.graphs-two{
+    width:90%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.survey-graph{
+    width:65%;
+    height:300px;
+}
+.survev{
+    width:100%;
+    padding-top: 3%;
+    padding-left:9%;
+    display: flex;
+    justify-content: space-between;
+
+}
+img{
+    cursor: pointer;
+}
+.team-img-survey img{
+width:250px;
+height:250px;
+border-radius: 5px;
+padding: 1%;
+}
+/* contact*/
+.Contact{
+width:100%;
+height: 400px;
+background-color: rgb(46, 45, 45);
+position: relative;
+}
+/*Contact*/
+.contact-info{
+    width:80%;
+    
+    color:whitesmoke;
+    display: flex;
+    justify-content: space-between;
+}
+.contact-details{
+    width: 45%;
+    font-size: 25px;
+    padding:2% 4%;
+    margin-top: 15px;
+}
+.icons{
+    display: flex;
+    padding:2%;
+}
+.icons p{
+    margin: 2%;
+}
+.contact-information{
+    width:100%;
+    padding:3% 6%;
+} 
+.contact-information input{
+    width:100%;
+    height: 45px;
+    padding: 2% 4%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border: 1.5px solid white;
+    margin-top: 15px;
+    border-radius: 5px;
+    color:whitesmoke;
+    font-size: 15px;
+}
+.contact-information textarea{
+    width:100%;
+    height:95px;
+    padding: 2% 4%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border: 1.5px solid white;
+    margin-top: 15px;
+    border-radius: 5px;
+    color:whitesmoke;
+    font-size: 15px;
+}
+button{
+    width:120px;
+    height: 45px;
+    border: none;
+    outline: none;
+    background-color: coral;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 2%;
+}
+.footer-info{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:1% 1%;
+    color: whitesmoke;
+    position: absolute;
+    bottom: 0;
+}
+/*for table*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    padding:10%;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    font-size: 23px;
+    background-color: #ffffff;
+    font-weight: bold; 
+}
+.items-food {
+    max-width: 100%;
+    margin: auto;
+
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.3);
+}
+.class-table h2{
+    text-align: center;
+    font-size: 35px;
+}
+
+.class-table{
+    width:100%;
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+
+.nutritionTable{
+width: 100%;
+padding: 5%;
+}
+#know{
+    text-align: center;
+    font-size: 24px;
+    
+    
+}
+.food-table{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+.calories-search{
+    width:100%;
+    padding:5% 9%;
+    margin: auto;
+    font-size: 20px;
+    display: flex;
+    
+}
+.calories-search input{
+    width:100%;
+    padding:2%;
+    color:black;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+.calories-search button{
+    width:30%;
+    height: 65px;
+    padding:5px;
+    border-radius: 8px;
+    background-color: rgb(171, 227, 164);
+}
+button{
+    cursor: pointer;
+}
